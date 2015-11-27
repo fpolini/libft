@@ -6,11 +6,11 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:21:32 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/27 16:48:52 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/27 18:18:01 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 int		ft_strcmp(char *s1, const char *s2)
 {

@@ -1,26 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 12:25:06 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/27 18:11:39 by fpolini          ###   ########.fr       */
+/*   Created: 2015/11/27 18:15:33 by fpolini           #+#    #+#             */
+/*   Updated: 2015/11/27 18:53:10 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strcpy(char *dst, const char *src)
+unsigned long ft_strlcat(char *dst, char *src, unsigned long n)
 {
 	int i;
+	int j;
 
 	i = 0;
-	while (src[i] != '\0')
+	j = 0;
+	while (dst[i] != '\0' && i < n)
 	{
-		dst[i] = src[i];
 		i = i + 1;
 	}
-	return (dst);
+	while (src[j] != '\0' && i < n)
+	{
+		dest[i] = src[j];
+		j = j + 1;
+		i = i + 1;
+	}
+	dest[i] = '\0';
+	return (dest);
 }

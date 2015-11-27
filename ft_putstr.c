@@ -6,11 +6,11 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 15:13:57 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/27 15:41:44 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/27 18:10:02 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_header.h"
+#include "libft.h"
 
 void	ft_putstr(char const *s)
 {

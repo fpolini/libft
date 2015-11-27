@@ -6,11 +6,13 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:13:29 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/27 17:02:11 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/27 18:22:56 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strlen(const char *s)
+#include "libft.h"
+
+unsigned long	ft_strlen(const char *s)
 {
 	int i;
 
