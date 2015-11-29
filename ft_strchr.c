@@ -1,28 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strcmp.c                                        :+:      :+:    :+:   */
+/*   ft_strchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/27 13:21:32 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 19:22:02 by fpolini          ###   ########.fr       */
+/*   Created: 2015/11/29 16:15:42 by fpolini           #+#    #+#             */
+/*   Updated: 2015/11/29 17:41:19 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_strcmp(const char *s1, const char *s2)
+char	*ft_strchr(const char *s, int c)
 {
-	int i;
-	int nbr;
+	const char	*pointeur;
+	char		k;
+	int			i;
 
-	nbr = 0;
+	pointeur = "NULL";
 	i = 0;
-	while (s1[i] == s2[i] && s1[i] != '\0' && s2[i] != '\0')
+	k = (char)c;
+	while (s[i] != k && s[i] != '\0')
 	{
 		i = i + 1;
 	}
-	nbr = s1[i] - s2[i];
-	return (nbr);
+	if (s[i] == '\0')
+		return ((char*)pointeur);
+	else
+	{
+		pointeur = &s[i + 1];
+		return ((char*)pointeur);
+	}
 }

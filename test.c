@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 15:08:57 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/29 20:17:44 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main()
 	//printf("%d", ft_isprint(32));
 	//printf("%d", ft_isalpha(l2));
 	//ft_putchar(c);
-	//ft_strcat(str, ptr);
+	//ft_putstr(ft_strcat(str, ptr));
 	//ft_strncat(str, ptr, 3);
 	//ft_strlcat(str, ptr, );
 	//ft_putstr(str);
@@ -51,11 +51,13 @@ int		main()
 	//ft_putstr(str);
 	//ft_strncpy(str, ptr, 2);
 	//ft_putstr(str);
-	//printf("%d", ft_strcmp("ohello", "hello"));
-	//printf("%d", ft_strncmp("helli", "hello", 3));
+	//printf("%d", ft_strcmp("", ""));
+	//printf("%d", ft_strncmp("maman", "mamanhello", 6));
 	//printf("%d", nbr);
-	//printf("%d", ft_strlen("hello"));
-	//ft_putstr(ft_strstr("nmamanhello", "aman"));
-	printf("%zu", ft_strlen("hello"));
+	//printf("%zu", ft_strlen("maman"));
+	//ft_putstr(ft_strstr("nmama", "manhello"));
+	//printf("%zu", ft_strlen("hello"));
+	//ft_putstr(ft_strchr("he.llo.maman",056 ));
+	printf("%p", ft_memalloc(10));
 	return (0);
 }

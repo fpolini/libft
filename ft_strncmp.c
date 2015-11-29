@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:39:00 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 13:56:36 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/29 19:16:19 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ int		ft_strncmp(const char *s1, const char *s2, size_t n)
 		i = i + 1;
 	}
 	nbr = s1[i] - s2[i];
-	return (nbr);
+	return ((i == n) ? 0 : nbr);
 }
