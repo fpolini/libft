@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 20:24:43 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/29 21:07:43 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,7 @@ int		main()
 	//ft_putstr(ft_strstr("nmama", "manhello"));
 	//printf("%zu", ft_strlen("hello"));
 	//ft_putstr(ft_strchr("he.llo.maman",056 ));
-	printf("%p", ft_memalloc(10));
+//	printf("%p", ft_memalloc(10));
+	printf("%p", ft_memset("000", 3, 10));	
 	return (0);
 }
