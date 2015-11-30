@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 21:07:43 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/30 12:12:48 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int		main()
 {
 	char c;
-	char str[] = "hello";
+	const char *str;
 	char ptr[] = "mmmmmmmmmmmmm";
 	char l[] = "rt";
 	int nbr;
@@ -28,7 +28,7 @@ int		main()
 	l1 = 'A';
 	l2 = ';';
 	l3 = '9';
-	
+	str = "hello";
 	
 //	ft_putchar(ft_tolower(c));
 	//printf("%d", ft_isalnum(l2));
@@ -54,11 +54,13 @@ int		main()
 	//printf("%d", ft_strcmp("", ""));
 	//printf("%d", ft_strncmp("maman", "mamanhello", 6));
 	//printf("%d", nbr);
-	//printf("%zu", ft_strlen("maman"));
+	//printf("%zu", ft_strlen(str));
 	//ft_putstr(ft_strstr("nmama", "manhello"));
 	//printf("%zu", ft_strlen("hello"));
 	//ft_putstr(ft_strchr("he.llo.maman",056 ));
 //	printf("%p", ft_memalloc(10));
-	printf("%p", ft_memset("000", 3, 10));	
+//	printf("%p", ft_memset("000", 3, 10));	
+	ft_putstr(ft_strrchr(str,056));
+	
 	return (0);
 }
