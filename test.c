@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 12:12:48 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/30 19:42:46 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ int		main()
 {
 	char c;
 	const char *str;
-	char ptr[] = "mmmmmmmmmmmmm";
+	const char *ptr;;
 	char l[] = "rt";
 	int nbr;
 	int l1;
@@ -28,8 +28,8 @@ int		main()
 	l1 = 'A';
 	l2 = ';';
 	l3 = '9';
-	str = "hello";
-	
+	str = "helloytello";
+	ptr = "loyteuy";
 //	ft_putchar(ft_tolower(c));
 	//printf("%d", ft_isalnum(l2));
 	//printf("%d", ft_isalnum(l3));
@@ -55,12 +55,18 @@ int		main()
 	//printf("%d", ft_strncmp("maman", "mamanhello", 6));
 	//printf("%d", nbr);
 	//printf("%zu", ft_strlen(str));
-	//ft_putstr(ft_strstr("nmama", "manhello"));
+	//ft_putstr(ft_strstr(str, ptr));
+	//ft_putstr(ft_strnstr(str, ptr, 4));
 	//printf("%zu", ft_strlen("hello"));
-	//ft_putstr(ft_strchr("he.llo.maman",056 ));
+	//ft_putstr(ft_strchr(str,056 ));
 //	printf("%p", ft_memalloc(10));
 //	printf("%p", ft_memset("000", 3, 10));	
-	ft_putstr(ft_strrchr(str,056));
-	
+	//ft_putstr(ft_strrchr(str,'h' ));
+	//ft_putstr(ft_strdup(str));
+	//ft_putchar('\n');
+	//ft_putstr(ft_strndup(str, 4));
+	//printf("%zu",ft_strlen(ft_strnew(3)));
+	//printf("%d", ft_atoi("1234"));
+	ft_putnbr(2147483648);
 	return (0);
 }

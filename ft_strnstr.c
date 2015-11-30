@@ -1,26 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memset.c                                        :+:      :+:    :+:   */
+/*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 20:47:25 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 16:25:49 by fpolini          ###   ########.fr       */
+/*   Created: 2015/11/30 12:32:39 by fpolini           #+#    #+#             */
+/*   Updated: 2015/11/30 15:03:03 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memset(void *b, int c, size_t len)
+char		*ft_strnstr(const char *s1, const char *s2, size_t n)
 {
-	size_t	i;
+	const char	*pointeur;
+	int			i;
 
+	
+	pointeur = &s1[0];
 	i = 0;
-	while (i < len)
+	
+	while (s1[i] != '\0' && i < n)
 	{
-		((char *)b)[i] = (char)(unsigned char)c;
-		i = i + 1;
+		if (ft_strncmp(pointeur, s2, ft_strlen(s2)) == 0)
+			return((char*)pointeur);
+		else
+		{
+			i = i + 1;
+			pointeur = &s1[i];
+		}
 	}
-	return (b);
+	return ("NULL");
 }

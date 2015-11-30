@@ -6,19 +6,18 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:56:44 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/29 19:23:21 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/30 15:03:06 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
 char		*ft_strstr(const char *s1, const char *s2)
 {
 	const char	*pointeur;
 	int			i;
 
-	pointeur = s1;
+	pointeur = &s1[0];
 	i = 0;
 	while (s1[i] != '\0')
 	{
