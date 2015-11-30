@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 20:12:07 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/30 20:23:40 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 int		main()
 {
 	char c;
-	const char *str;
+	char *str;
 	const char *ptr;;
 	char l[] = "rt";
 	int nbr;
@@ -66,7 +66,9 @@ int		main()
 	//ft_putchar('\n');
 	//ft_putstr(ft_strndup(str, 4));
 	//printf("%zu",ft_strlen(ft_strnew(3)));
-	ft_putnbr(ft_atoi("2147483647"));
+//	ft_putnbr(ft_atoi("2147483647"));
 //	ft_putnbr(2147483648);
+	ft_strclr(str);
+	//ft_putchar(str[2]);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 20:12:14 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/11/30 20:14:33 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 #include	<stdlib.h>
 #include	<string.h>
 
+void	ft_strclr(char *s);
 void	ft_putnbr(int n);
 void	ft_putchar(char c);
 char	*ft_strcpy(char *dst, const char *src);
