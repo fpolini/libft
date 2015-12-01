@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 19:11:31 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/01 19:55:48 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,13 +23,13 @@ int		main()
 	int l1;
 	int l2;
 	int l3;
-
+		
 	c = 'z';
 	l1 = 'A';
 	l2 = ';';
 	l3 = '9';
 	str = "hello";
-	ptr = "maman";
+	ptr = "*";
 	//ft_putnbr(ft_strlen(ft_strsub(str, 1, 2)));
 	//ft_putstr(ft_strsub(str, 1, 2));
 	//ft_putstr(ft_strjoin(str, ptr));
