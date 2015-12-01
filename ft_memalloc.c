@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 19:27:30 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 16:43:12 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/01 14:28:31 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,6 @@ void	*ft_memalloc(size_t size)
 	if (str == NULL)
 		return (NULL);
 	else
-		bzero(str, size);
+		ft_bzero(str, size);
 	return (str);
 }

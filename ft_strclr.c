@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 20:14:47 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 20:30:42 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/01 13:12:29 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,5 +14,5 @@
 
 void	ft_strclr(char *s)
 {
-	s = ft_memset(s, 0, sizeof(s));
+	ft_bzero(s, ft_strlen(s));
 }

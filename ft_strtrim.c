@@ -1,33 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 12:32:39 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:39 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/01 13:28:59 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/01 18:58:56 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strtrim(char const *s)
 {
-	const char	*pointeur;
-	int			i;
+	char	*str;
+	int		j;
+	int		i;
+	int		k;
 
-	pointeur = &s1[0];
+	k = 0;
 	i = 0;
-	while (s1[i] != '\0' && i < n)
+	j = (int)ft_strlen(s);
+	while (s[i] == ' ' || s[i] == '\n' || s[i] == '\t')
+		i = i + 1;
+	while (s[j - 1] == ' ' || s[j - 1] == '\n' || s[j - 1] == '\t')
+		j = j - 1;
+	str = (char*)malloc(sizeof(char) * ((j - i + 1)));
+	if (str == NULL)
+		return (NULL);
+	else
 	{
-		if (ft_strncmp(pointeur, s2, ft_strlen(s2)) == 0)
-			return ((char*)pointeur);
-		else
+		while (i < j)
 		{
+			str[k] = s[i];
 			i = i + 1;
-			pointeur = &s1[i];
+			k = k + 1;
 		}
 	}
-	return ("NULL");
+	return (str);
 }

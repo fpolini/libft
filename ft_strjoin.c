@@ -1,33 +1,41 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 12:32:39 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:39 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/01 18:32:41 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/01 18:56:23 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+char	*ft_strjoin(char const *s1, char const *s2)
 {
-	const char	*pointeur;
-	int			i;
+	int		i;
+	int		n;
+	int		p;
+	char	*str;
 
-	pointeur = &s1[0];
 	i = 0;
-	while (s1[i] != '\0' && i < n)
+	n = ft_strlen(s1);
+	p = ft_strlen(s2);
+	str = (char*)malloc(sizeof(char) * ((n + p + 1)));
+	if (str == NULL)
+		return (NULL);
+	else
 	{
-		if (ft_strncmp(pointeur, s2, ft_strlen(s2)) == 0)
-			return ((char*)pointeur);
-		else
+		while (i < (n + p))
 		{
+			if (i < n)
+				str[i] = s1[i];
+			if (i >= n)
+				str[i] = s2[i - n];
 			i = i + 1;
-			pointeur = &s1[i];
 		}
+		str[i] = '\0';
 	}
-	return ("NULL");
+	return (str);
 }

@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 20:23:40 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/01 19:07:14 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,12 @@ int		main()
 	l1 = 'A';
 	l2 = ';';
 	l3 = '9';
-	str = "helloytello";
-	ptr = "loyteuy";
+	str = "hello";
+	ptr = "maman";
+	//ft_putnbr(ft_strlen(ft_strsub(str, 1, 2)));
+	//ft_putstr(ft_strsub(str, 1, 2));
+	//ft_putstr(ft_strjoin(str, ptr));
+	//	ft_putnbr(ft_strlen(str) + ft_strlen(ptr));
 //	ft_putchar(ft_tolower(c));
 	//printf("%d", ft_isalnum(l2));
 	//printf("%d", ft_isalnum(l3));
@@ -51,8 +55,8 @@ int		main()
 	//ft_putstr(str);
 	//ft_strncpy(str, ptr, 2);
 	//ft_putstr(str);
-	//printf("%d", ft_strcmp("", ""));
-	//printf("%d", ft_strncmp("maman", "mamanhello", 6));
+	//printf("%d", ft_strcmp(str, ptr));
+	//printf("%d", ft_strncmp("maman", "mamanhello", 5));
 	//printf("%d", nbr);
 	//printf("%zu", ft_strlen(str));
 	//ft_putstr(ft_strstr(str, ptr));
@@ -66,9 +70,12 @@ int		main()
 	//ft_putchar('\n');
 	//ft_putstr(ft_strndup(str, 4));
 	//printf("%zu",ft_strlen(ft_strnew(3)));
-//	ft_putnbr(ft_atoi("2147483647"));
+	//ft_putnbr_fd(ft_atoi("2147483647"), 1);
 //	ft_putnbr(2147483648);
-	ft_strclr(str);
-	//ft_putchar(str[2]);
+	//ft_strclr(str);
+	//ft_putchar_fd(str[0], 1);
+	//ft_putstr_fd("hello", 1);
+	//ft_putendl_fd("hello", 1);
+	//ft_putendl("hello");
 	return (0);
 }

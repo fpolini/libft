@@ -1,33 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_putendl.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 12:32:39 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 17:33:39 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/01 13:18:48 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/01 13:20:50 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char		*ft_strnstr(const char *s1, const char *s2, size_t n)
+void	ft_putendl(char const *s)
 {
-	const char	*pointeur;
-	int			i;
-
-	pointeur = &s1[0];
-	i = 0;
-	while (s1[i] != '\0' && i < n)
-	{
-		if (ft_strncmp(pointeur, s2, ft_strlen(s2)) == 0)
-			return ((char*)pointeur);
-		else
-		{
-			i = i + 1;
-			pointeur = &s1[i];
-		}
-	}
-	return ("NULL");
+	ft_putendl_fd(s, 1);
 }
