@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 15:28:26 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 17:34:04 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:33:53 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,7 @@ void	*ft_memcpy(void *dst, const void *src, size_t n)
 	i = 0;
 	while (i < n)
 	{
+		dst = (char*)src;
 	}
 	return (dst);
 }

@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:30:21 by fpolini           #+#    #+#             */
-/*   Updated: 2015/11/30 14:35:42 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/02 13:28:28 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strndup(const char *s1, size_t n)
 {
-	char	*str;
-	int		i;
+	char		*str;
+	size_t		i;
 
 	str = (char*)malloc(sizeof(*str) * n + 1);
 	if (str == NULL)
