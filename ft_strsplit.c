@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:32:28 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 14:13:37 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/02 14:28:02 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,16 @@ int		nb_word(const char *s, char c)
 
 	nb = 0;
 	i = 0;
-	while (i < (ft_strlen(s) - 1))
+	if (ft_strlen(s) != 0)
 	{
-		if (s[i] == c && s[i + 1] != c)
-			nb = nb + 1;
-		i = i + 1;
+		while (i < (ft_strlen(s) - 1))
+		{
+			if (s[i] == c && s[i + 1] != c)
+				nb = nb + 1;
+			if (i == 0 && s[0] != c)
+				nb = nb + 1;
+			i = i + 1;
+		}
 	}
 	return (nb);
 }
@@ -68,6 +73,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	k = 0;
 	i = 0;
+	ft_putnbr(nb_word(s, c));
 	tab = (char**)malloc(sizeof(char*) * nb_word(s, c));
 	if (tab == NULL)
 		return (NULL);
