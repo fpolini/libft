@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:32:28 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 14:29:53 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/02 21:01:23 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,6 @@ char	**ft_strsplit(char const *s, char c)
 
 	k = 0;
 	i = 0;
-	ft_putnbr(nb_word(s, c));
 	tab = (char**)malloc(sizeof(char*) * nb_word(s, c));
 	if (tab == NULL)
 		return (NULL);
@@ -89,5 +88,6 @@ char	**ft_strsplit(char const *s, char c)
 		}
 		i = i + 1;
 	}
+	free(tab);
 	return (tab);
 }
