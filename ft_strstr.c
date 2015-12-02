@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:56:44 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 17:26:40 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/02 17:24:12 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,5 @@ char		*ft_strstr(const char *s1, const char *s2)
 			pointeur = &s1[i];
 		}
 	}
-	return ("NULL");
+	return (NULL);
 }

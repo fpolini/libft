@@ -1,35 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strchr.c                                        :+:      :+:    :+:   */
+/*   ft_memcmp.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/29 16:15:42 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 17:34:17 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/02 15:50:34 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/02 16:09:57 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strchr(const char *s, int c)
+int		ft_memcmp(const void *s1, const void *s2, size_t n)
 {
-	const char	*pointeur;
-	char		k;
-	int			i;
+	size_t			i;
+	unsigned char	*s11;
+	unsigned char	*s22;
 
-	pointeur = NULL;
+	s11 = (unsigned char*)s1;
+	s22 = (unsigned char*)s2;
 	i = 0;
-	k = (char)c;
-	while (s[i] != k && s[i] != '\0')
-	{
+	while (s11[i] == s22[i] && i < n)
 		i = i + 1;
-	}
-	if (s[i] == '\0')
-		return ((char*)pointeur);
-	else
-	{
-		pointeur = &s[i];
-		return ((char*)pointeur);
-	}
+	return (s11[i] - s22[i]);
 }
