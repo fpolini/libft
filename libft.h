@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/03 17:00:04 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/03 17:11:09 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,4 +70,5 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len);
 void	ft_strdel(char **as);
 int		ft_strequ(char const *s1, char const *s2);
 int		ft_strnequ(char const *s1, char const *s2, size_t n);
+void	ft_memdel(void **ap);
 #endif
