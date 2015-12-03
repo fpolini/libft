@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 16:15:42 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 17:34:17 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/03 19:39:55 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,10 +22,8 @@ char	*ft_strchr(const char *s, int c)
 	i = 0;
 	k = (char)c;
 	while (s[i] != k && s[i] != '\0')
-	{
 		i = i + 1;
-	}
-	if (s[i] == '\0')
+	if (s[i] == '\0' && c != 0)
 		return ((char*)pointeur);
 	else
 	{
