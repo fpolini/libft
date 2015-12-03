@@ -1,25 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   test.c                                             :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/03 14:48:03 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/03 14:33:55 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/03 14:47:59 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
 
-int		main()
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char str[] = "maman";
-	char ptr[] = "voiture";
-	
-	ft_strlcat(str, ptr, 11);	
-	ft_putstr(str);
-	return (0);
-}
+	size_t			n;
+	unsigned int	i;
+	char			*str;
 
+	i = 0;
+	n = ft_strlen(s);
+	str = (char*)malloc(sizeof(char) * (n + 1));
+	while (s[i] != '\0')
+	{
+		str[i] = f(i, str[i]);
+		i = i + 1;
+	}
+	str[i] = '\0';
+	return (str);
+}

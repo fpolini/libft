@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 19:47:40 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/03 14:47:56 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <stdlib.h>
 # include <string.h>
 
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char	*ft_itoa(int n);
 char	**ft_strsplit(char const *s, char c);
 void	ft_strclr(char *s);
