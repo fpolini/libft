@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/24 11:43:12 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 21:01:27 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/03 14:24:37 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,12 +15,11 @@
 
 int		main()
 {
-	const char *str;
-	char **tab;
+	char str[] = "maman";
+	char ptr[] = "voiture";
 	
-	str = "****hello**voiture***lol";
-	
-	ft_putstr(ft_itoa(104050));	
+	ft_strlcat(str, ptr, 11);	
+	ft_putstr(str);
 	return (0);
 }
 
