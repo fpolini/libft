@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/03 16:49:19 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/03 16:55:41 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -75,9 +75,9 @@ $(NAME):
 	ranlib $(NAME)
 
 clean:
-	/rm -rf $(OBJ)
+	/bin/rm -rf $(OBJ)
 
 fclean: clean
-	/rm - rf $(NAME)
+	/bin/rm -rf $(NAME)
 
 re: fclean all
