@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:15:33 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/03 14:24:40 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/03 17:13:09 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ int		ft_strlcat(char *dst, char *src, size_t n)
 	j = 0;
 	k = ft_strlen(dst) + ft_strlen(src);
 	if (n < i)
-		return (k);
+		return (i + n);
 	if (n == i)
 		return (k);
 	else
