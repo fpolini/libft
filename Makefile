@@ -6,13 +6,12 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/03 16:33:42 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/03 16:49:19 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 
 NAME = libft.a
-OBJ = $(SRC:.c=.o)
 SRC =	ft_atoi.c\
 		ft_bzero.c\
 		ft_isalnum.c\
@@ -66,10 +65,12 @@ SRC =	ft_atoi.c\
 		ft_tolower.c\
 		ft_toupper.c\
 
+OBJ = $(SRC:.c=.o)
+
 all: $(NAME)
 
 $(NAME):
-	gcc -c -Wall -Wextra -Werror $(NAME) $(SRC)
+	gcc -c -Wall -Wextra -Werror $(SRC)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
 
