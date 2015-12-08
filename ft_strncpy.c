@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:06:35 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/03 19:48:01 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/08 13:03:54 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t n)
 {
-	size_t 	i;
+	size_t	i;
 	char	*ptr;
 
 	ptr = (char*)src;

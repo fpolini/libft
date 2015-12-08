@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/29 13:56:44 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/03 20:16:00 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/08 13:05:01 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,24 @@
 
 char		*ft_strstr(const char *s1, const char *s2)
 {
-	char	*pointeur;
-	int		i;
+	const char	*pointeur;
+	int			i;
+	size_t		n;
 
-	pointeur = (char*)s1;
+	n = ft_strlen(s2);
+	pointeur = &s1[0];
 	i = 0;
-	while (ft_strlen(pointeur) > n)
+	if (s1[0] == '\0' && s1[0] == s2[0])
+		return ((char*)pointeur);
+	while (s1[i] != '\0')
 	{
-		pointeur = ft_strchr(s1, s2[0]);
-		if (ft_strnequ(pointeur, s2, n) == 0)
-			return (pointeur);
+		if (ft_strncmp(pointeur, s2, n) == 0)
+			return ((char*)pointeur);
+		else
+		{
+			i = i + 1;
+			pointeur = &s1[i];
+		}
 	}
 	return (NULL);
 }
