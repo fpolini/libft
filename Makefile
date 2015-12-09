@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/03 17:15:48 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/09 19:18:41 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -65,6 +65,12 @@ SRC =	ft_atoi.c\
 		ft_strtrim.c\
 		ft_tolower.c\
 		ft_toupper.c\
+		ft_lstadd.c\
+		ft_lstdel.c\
+		ft_lstdelone.c\
+		ft_lstiter.c\
+		ft_lstmap.c\
+		ft_lstnew.c\
 
 OBJ = $(SRC:.c=.o)
 
