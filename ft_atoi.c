@@ -6,17 +6,17 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:16:37 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/09 12:50:22 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/09 14:17:42 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-unsigned int ft_range(int i, const char *str)
+unsigned int	ft_range(int i, const char *str)
 {
 	int	j;
 	int	t;
-	
+
 	t = 1;
 	j = i;
 	while (str[j] != '\0' && ft_isdigit(str[j]))
@@ -27,35 +27,49 @@ unsigned int ft_range(int i, const char *str)
 	return (t / 10);
 }
 
-int	ft_print(int i, const char *str)
+int				ft_print(const char *str)
 {
-	while (str[i] != '\0' && 
-			(str[i] == '0' || 
-			 str[i] == ' ' || 
-			 str[i] == '\n' ||
-			 str[i] == '\t' ||
-			 str[i] == '\r' ||
-			 str[i] == '\v' ||
-			 str[i] == '\f'))
+	int	i;
+
+	i = 0;
+	while (str[i] != '\0' &&
+			(str[i] == '0' ||
+			str[i] == ' ' ||
+			str[i] == '\n' ||
+			str[i] == '\t' ||
+			str[i] == '\r' ||
+			str[i] == '\v' ||
+			str[i] == '\f'))
 		i = i + 1;
 	return (i);
 }
 
-int	ft_atoi(const char *str)
+int				ft_zero(const char *str, int i)
+{
+	while (str[i] != '\0' && str[i] == '0')
+		i = i + 1;
+	return (i);
+}
+
+int				ft_plusmoins(const char *str, int i)
+{
+	if (str[i] == '+' || str[i] == '-')
+		i = i + 1;
+	return (i);
+}
+
+int				ft_atoi(const char *str)
 {
 	int				i;
 	unsigned int	nbr;
 	unsigned int	p;
 	int				a;
 
-	i = 0;
 	nbr = 0;
-	i = ft_print(i, str);
-	if (str[i] == '+' || str[i] == '-')
-		i = i + 1;
+	i = ft_print(str);
+	i = ft_plusmoins(str, i);
 	a = i - 1;
-	while (str[i] != '\0' && str[i] == '0')
-		i = i + 1;
+	i = ft_zero(str, i);
 	p = ft_range(i, str);
 	while (str[i] != '\0')
 	{
