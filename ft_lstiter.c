@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/03 17:05:03 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/09 17:32:24 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/09 18:01:44 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/09 19:02:46 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	if (ap && *ap)
+	while (lst->next != NULL)
 	{
-		free(*ap);
-		*ap = NULL;
+		f(lst);
+		lst = lst->next;
 	}
 }
