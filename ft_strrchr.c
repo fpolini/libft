@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 11:34:03 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/01 16:42:22 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/09 13:57:42 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char		*ft_strrchr(const char *s, int c)
 	char		k;
 	int			i;
 
-	pointeur = "NULL";
+	pointeur = NULL;
 	i = (int)(ft_strlen(s));
 	k = (char)c;
 	while (s[i] != k && i != 0)
@@ -29,7 +29,7 @@ char		*ft_strrchr(const char *s, int c)
 		return ((char*)pointeur);
 	else
 	{
-		pointeur = &s[i + 1];
+		pointeur = &s[i];
 		return ((char*)pointeur);
 	}
 }
