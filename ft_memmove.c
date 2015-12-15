@@ -6,20 +6,39 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:30:32 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 16:20:18 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/15 19:45:01 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memmove(void *dst, const void *src, size_t n)
+void	*ft_memmove(void *s1, const void *s2, size_t n)
 {
-	void	*str;
+	char	*ss1;
+	const char	*ss2;
 
-	str = ft_memalloc(n);
-	if (str == NULL)
-		return (NULL);
-	str = ft_memcpy(str, src, n);
-	dst = ft_memcpy(dst, ((const void*)str), n);
-	return (dst);
+	ss1 = s1;
+	ss2 = s2;
+	if ((ss1 <= ss2) || ((ss1 + n) <= ss2))
+	{
+		while (n > 0)
+		{
+			*ss1 = *ss2;
+			ss1 = ss1 + 1;
+			ss2 = ss2 + 1;
+			n = n - 1;
+		}
+	}
+	else
+	{
+		ss1 = ss1 + n - 1;
+		ss2 = ss2 + n - 1;
+		while (n > 0)
+		{
+			*ss1 = *ss2;
+			ss1 = ss1 - 1;
+			ss2 = ss2 - 1;
+		}
+	}
+	return (s1);
 }

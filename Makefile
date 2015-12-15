@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/09 19:18:41 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/15 18:47:54 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,12 +74,16 @@ SRC =	ft_atoi.c\
 
 OBJ = $(SRC:.c=.o)
 
+CFLAGS = -Wall -Wextra -Werror
+
 all: $(NAME)
 
-$(NAME):
-	gcc -c -Wall -Wextra -Werror $(SRC)
+$(NAME): $(OBJ)
 	ar rc $(NAME) $(OBJ)
 	ranlib $(NAME)
+
+%.o: %.c
+	gcc $(CFLAGS) -c $<
 
 clean:
 	/bin/rm -rf $(OBJ)

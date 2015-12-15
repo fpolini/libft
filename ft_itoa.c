@@ -5,67 +5,65 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/02 18:45:53 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/09 13:51:34 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/15 16:45:56 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/15 19:26:55 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "libft.h" 
 
-int		tall(int n)
-{
-	int	i;
-	int	t;
+int	taille(int n) 
+{ 
+	int len; 
 
-	t = 0;
-	i = 1;
-	while ((unsigned int)(n / i) >= 1 && n != 0)
-	{
-		t = t + 1;
-		i = i * 10;
-	}
-	if (n < 0 || n == 0)
-		t = t + 1;
-	return (t);
-}
+	len = 1; 
+	if (n < 0) 
+	{ 
+		len++; 
+		n = -n; 
+	} 
+	while (n > 9) 
+	{ 
+		n /= 10; 
+		len++; 
+	} 
+	return (len); 
+} 
 
-int		tall2(int n)
-{
-	int	i;
+char	*create_str(int len, int n, int neg, char *str) 
+{ 
+	while (len >= 0) 
+	{ 
+		str[len] = (n % 10) + 48; 
+		n /= 10; 
+		len--; 
+	} 
+	if (neg < 0) 
+		str[0] = '-'; 
+	return (str); 
+} 
 
-	i = 1;
-	while ((unsigned int)(n / i) >= 1 && n != 0)
-		i = i * 10;
-	return (i / 10);
-}
+char	*ft_itoa(int n) 
+{ 
+	char	*str; 
+	int	len; 
+	int	neg; 
 
-char	*mz(char *str, int n)
-{
-	str[tall(n)] = '\0';
-	if (n == 0)
-		str[0] = '0';
-	if (n < 0)
-		str[0] = '-';
-	return (str);
-}
-
-char	*ft_itoa(int n)
-{
-	int		j;
-	char	*str;
-
-	j = tall(n) - 1;
-	str = (char*)malloc(sizeof(char) * (tall(n) + 1));
-	if (str == NULL)
-		return (NULL);
-	str = mz(str, n);
-	if (n < 0)
-		n = -n;
-	while (j >= 0 && str[j] != '-' && n != 0)
-	{
-		str[j] = (n % 10) + 48;
-		n = (n - (n % 10)) / 10;
-		j = j - 1;
-	}
-	return (str);
+	if (n == -2147483648) 
+		return (ft_strdup("-2147483648")); 
+	neg = n; 
+	len = taille(n); 
+	str = (char *)malloc(sizeof(*str) * (len + 1)); 
+	if (!str) 
+		return (NULL); 
+	str[len] = '\0'; 
+	len--; 
+	if (n == 0) 
+	{ 
+		str[0] = '0'; 
+		return (str); 
+	} 
+	if (n < 0) 
+		n = -n; 
+	return (create_str(len, n, neg, str)); 
 }

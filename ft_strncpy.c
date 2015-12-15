@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 13:06:35 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/08 13:03:54 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/15 19:32:21 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ char	*ft_strncpy(char *dst, const char *src, size_t n)
 		dst[i] = ptr[i];
 		i = i + 1;
 	}
-	while (dst[i] != '\0' && i < n)
+	while (i < n)
 	{
 		dst[i] = '\0';
 		i = i + 1;

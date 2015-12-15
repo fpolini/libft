@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 14:30:21 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/02 13:28:28 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/15 19:30:00 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,5 @@ char	*ft_strndup(const char *s1, size_t n)
 		}
 		str[i] = '\0';
 	}
-	free(str);
 	return (str);
 }

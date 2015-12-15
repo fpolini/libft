@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/30 16:16:37 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/09 14:17:42 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/15 16:49:36 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,8 @@ int				ft_plusmoins(const char *str, int i)
 int				ft_atoi(const char *str)
 {
 	int				i;
-	unsigned int	nbr;
-	unsigned int	p;
+ 	int				nbr;
+ 	int				p;
 	int				a;
 
 	nbr = 0;
