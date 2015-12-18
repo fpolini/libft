@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 16:45:56 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 16:48:24 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 17:14:38 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,12 +32,14 @@ char		*ft_itoa(int n)
 	char	*str;
 	int		i;
 
+	i = numb(n);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	i = numb(n);
 	if (n < 0)
 		i = i + 1;
 	str = ft_strnew(i + 1);
+	if (!str)
+		return (NULL);
 	str[0] = '0';
 	if (n < 0)
 	{
@@ -46,7 +48,7 @@ char		*ft_itoa(int n)
 	}
 	while (i >= 0 && n != 0)
 	{
-		str[i + 1] = (n % 10) + 48;
+		str[i] = (n % 10) + 48;
 		n = n / 10;
 		i = i - 1;
 	}
