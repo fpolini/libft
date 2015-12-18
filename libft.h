@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 18:32:42 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 19:00:47 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,7 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+int				ft_tall_tab(char **tab);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
@@ -40,6 +41,7 @@ char			*ft_strncpy(char *dst, const char *src, size_t in);
 int				ft_strcmp(const char *s1, const char *s2);
 int				ft_strncmp(const char *s1, const char *s2, size_t n);
 size_t			ft_strlen(const char *s);
+void			ft_putnbr_fd_n(int n, int fd);
 void			ft_putnbr(int n);
 char			*ft_strcat(char *s1, char *s2);
 char			*ft_strncat(char *s1, char *s2, size_t n);

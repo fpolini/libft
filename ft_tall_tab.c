@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_tall_tab.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 18:33:00 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 18:44:25 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/18 18:56:32 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/18 19:00:52 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_putnbr(int n)
+int		ft_tall_tab(char **tab)
 {
-	unsigned int nb;
+	int	k;
 
-	nb = n;
-	if (n < 0)
-	{
-		ft_putchar('-');
-		nb = -n;
-	}
-	if (nb > 9)
-	{
-		ft_putnbr(nb / 10);
-		ft_putnbr(nb % 10);
-	}
-	else
-		ft_putchar(48 + nb);
+	k = 0;
+	while (tab[k])
+		k = k + 1;
+	return (k);
 }

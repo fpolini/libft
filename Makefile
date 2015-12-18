@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/18 18:33:12 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/18 19:03:47 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -35,6 +35,7 @@ SRC =	ft_atoi.c\
 		ft_putendl_fd.c\
 		ft_putnbr.c\
 		ft_putnbr_fd.c\
+		ft_putnbr_fd_n.c\
 		ft_putstr.c\
 		ft_putstr_fd.c\
 		ft_strcat.c\
@@ -63,6 +64,7 @@ SRC =	ft_atoi.c\
 		ft_strstr.c\
 		ft_strsub.c\
 		ft_strtrim.c\
+		ft_tall_tab.c\
 		ft_tolower.c\
 		ft_toupper.c\
 		ft_lstadd.c\
