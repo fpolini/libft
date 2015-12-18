@@ -6,11 +6,12 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:08:17 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/15 17:03:56 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 14:31:59 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+
 void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
 {
 	unsigned int	i;

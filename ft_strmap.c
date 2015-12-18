@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/03 14:49:19 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/15 19:33:59 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 14:00:23 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	i = 0;
 	n = ft_strlen(s);
 	if (!(str = (char*)malloc(sizeof(char) * (n + 1))))
-		return (NULL);	
+		return (NULL);
 	while (s[i] != '\0')
 	{
 		str[i] = f(s[i]);

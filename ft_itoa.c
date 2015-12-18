@@ -6,64 +6,64 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 16:45:56 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/15 19:26:55 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 15:39:57 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h" 
+#include "libft.h"
 
-int	taille(int n) 
-{ 
-	int len; 
+static int	taille(int n)
+{
+	int	longueur;
 
-	len = 1; 
-	if (n < 0) 
-	{ 
-		len++; 
-		n = -n; 
-	} 
-	while (n > 9) 
-	{ 
-		n /= 10; 
-		len++; 
-	} 
-	return (len); 
-} 
+	longueur = 1;
+	if (n < 0)
+	{
+		longueur++;
+		n = -n;
+	}
+	while (n > 9)
+	{
+		n /= 10;
+		longueur++;
+	}
+	return (longueur);
+}
 
-char	*create_str(int len, int n, int neg, char *str) 
-{ 
-	while (len >= 0) 
-	{ 
-		str[len] = (n % 10) + 48; 
-		n /= 10; 
-		len--; 
-	} 
-	if (neg < 0) 
-		str[0] = '-'; 
-	return (str); 
-} 
+static char	*create_str(int longueur, int n, int moins, char *str)
+{
+	while (longueur >= 0)
+	{
+		str[longueur] = (n % 10) + 48;
+		n /= 10;
+		longueur--;
+	}
+	if (moins < 0)
+		str[0] = '-';
+	return (str);
+}
 
-char	*ft_itoa(int n) 
-{ 
-	char	*str; 
-	int	len; 
-	int	neg; 
+char		*ft_itoa(int n)
+{
+	char	*str;
+	int		longueur;
+	int		moins;
 
-	if (n == -2147483648) 
-		return (ft_strdup("-2147483648")); 
-	neg = n; 
-	len = taille(n); 
-	str = (char *)malloc(sizeof(*str) * (len + 1)); 
-	if (!str) 
-		return (NULL); 
-	str[len] = '\0'; 
-	len--; 
-	if (n == 0) 
-	{ 
-		str[0] = '0'; 
-		return (str); 
-	} 
-	if (n < 0) 
-		n = -n; 
-	return (create_str(len, n, neg, str)); 
+	if (n == -2147483648)
+		return (ft_strdup("-2147483648"));
+	moins = n;
+	longueur = taille(n);
+	str = (char *)malloc(sizeof(*str) * (longueur + 1));
+	if (!str)
+		return (NULL);
+	str[longueur] = '\0';
+	longueur--;
+	if (n == 0)
+	{
+		str[0] = '0';
+		return (str);
+	}
+	if (n < 0)
+		n = -n;
+	return (create_str(longueur, n, moins, str));
 }

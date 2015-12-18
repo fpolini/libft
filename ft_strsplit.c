@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:32:28 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/15 17:52:17 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 15:41:06 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static size_t	ft_n_word(const char *s, char c)
 	return (0);
 }
 
-char	**ft_strsplit(const char *s, char c)
+char			**ft_strsplit(const char *s, char c)
 {
 	size_t	i;
 	size_t	j;
