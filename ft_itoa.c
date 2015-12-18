@@ -6,64 +6,49 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/15 16:45:56 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 15:39:57 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 16:48:24 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	taille(int n)
+static int	numb(int n)
 {
-	int	longueur;
+	int	i;
+	int	j;
 
-	longueur = 1;
-	if (n < 0)
+	i = 0;
+	j = n / 10;
+	while (j != 0)
 	{
-		longueur++;
-		n = -n;
+		j = j / 10;
+		i++;
 	}
-	while (n > 9)
-	{
-		n /= 10;
-		longueur++;
-	}
-	return (longueur);
-}
-
-static char	*create_str(int longueur, int n, int moins, char *str)
-{
-	while (longueur >= 0)
-	{
-		str[longueur] = (n % 10) + 48;
-		n /= 10;
-		longueur--;
-	}
-	if (moins < 0)
-		str[0] = '-';
-	return (str);
+	return (i);
 }
 
 char		*ft_itoa(int n)
 {
 	char	*str;
-	int		longueur;
-	int		moins;
+	int		i;
 
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
-	moins = n;
-	longueur = taille(n);
-	str = (char *)malloc(sizeof(*str) * (longueur + 1));
-	if (!str)
-		return (NULL);
-	str[longueur] = '\0';
-	longueur--;
-	if (n == 0)
-	{
-		str[0] = '0';
-		return (str);
-	}
+	i = numb(n);
 	if (n < 0)
+		i = i + 1;
+	str = ft_strnew(i + 1);
+	str[0] = '0';
+	if (n < 0)
+	{
+		str[0] = '-';
 		n = -n;
-	return (create_str(longueur, n, moins, str));
+	}
+	while (i >= 0 && n != 0)
+	{
+		str[i + 1] = (n % 10) + 48;
+		n = n / 10;
+		i = i - 1;
+	}
+	return (str);
 }

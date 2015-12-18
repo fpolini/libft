@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/15 18:47:54 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/18 16:46:59 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -54,7 +54,6 @@ SRC =	ft_atoi.c\
 		ft_strncat.c\
 		ft_strncmp.c\
 		ft_strncpy.c\
-		ft_strndup.c\
 		ft_strnequ.c\
 		ft_strnew.c\
 		ft_strnstr.c\
