@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 17:32:28 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 15:41:06 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 16:06:29 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ char			**ft_strsplit(const char *s, char c)
 	j = 0;
 	k = 0;
 	tab = (char **)malloc(sizeof(char*) * ft_n_word(s, c));
-	if (ft_n_word(s, c) == 0 || tab == NULL)
+	if (tab == NULL)
 		return (NULL);
 	while (s[i])
 	{

@@ -6,13 +6,13 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:30:32 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 14:30:54 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 16:16:25 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_do(void *s1, size_t n, char *ss1, const char *ss2)
+static void	*ft_do(void *s1, size_t n, char *ss1, const char *ss2)
 {
 	while (n-- > 0)
 	{
@@ -23,7 +23,7 @@ void	*ft_do(void *s1, size_t n, char *ss1, const char *ss2)
 	return (s1);
 }
 
-void	*ft_memmove(void *s1, const void *s2, size_t n)
+void		*ft_memmove(void *s1, const void *s2, size_t n)
 {
 	char			*ss1;
 	const char		*ss2;
