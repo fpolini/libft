@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/18 17:17:43 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 18:30:05 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 18:35:54 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,9 +42,7 @@ char		*ft_itoa_base(int n, int base)
 {
 	char	*str;
 	int		i;
-	int		t;
 
-	t = 0;
 	i = numb(n, base);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
@@ -61,8 +59,7 @@ char		*ft_itoa_base(int n, int base)
 	}
 	while (i >= 0 && n != 0)
 	{
-		t = ft_int_base(n, base);
-		str[i] = t + 48;
+		str[i] = ft_int_base(n, base) + 48;
 		n = n / base;
 		i = i - 1;
 	}
