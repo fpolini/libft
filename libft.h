@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 16:41:28 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/18 18:32:42 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ void			ft_striteri(char *s, void (*f)(unsigned int, char *));
 char			*ft_strmap(char const *s, char (*f)(char));
 char			*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char			*ft_itoa(int n);
+char			*ft_itoa_base(int n, int base);
 char			**ft_strsplit(char const *s, char c);
 void			ft_strclr(char *s);
 void			ft_putnbr(int n);

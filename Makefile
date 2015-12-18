@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/18 16:46:59 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/18 18:33:12 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -20,6 +20,7 @@ SRC =	ft_atoi.c\
 		ft_isdigit.c\
 		ft_isprint.c\
 		ft_itoa.c\
+		ft_itoa_base.c\
 		ft_memdel.c\
 		ft_memalloc.c\
 		ft_memccpy.c\

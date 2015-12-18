@@ -1,38 +1,51 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_itoa.c                                          :+:      :+:    :+:   */
+/*   ft_itoa_base.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/12/15 16:45:56 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 18:29:53 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/18 17:17:43 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/18 18:30:05 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-static int	numb(int n)
+static int	numb(int n, int base)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 
 	i = 0;
-	j = n / 10;
+	j = n / base;
 	while (j != 0)
 	{
-		j = j / 10;
+		j = j / base;
 		i++;
 	}
 	return (i);
 }
 
-char		*ft_itoa(int n)
+static int	ft_int_base(int n, int base)
+{
+	int	t;
+
+	t = 0;
+	t = n % base;
+	if (t >= 10)
+		t = t + 7;
+	return (t);
+}
+
+char		*ft_itoa_base(int n, int base)
 {
 	char	*str;
 	int		i;
+	int		t;
 
-	i = numb(n);
+	t = 0;
+	i = numb(n, base);
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	if (n < 0)
@@ -48,8 +61,9 @@ char		*ft_itoa(int n)
 	}
 	while (i >= 0 && n != 0)
 	{
-		str[i] = (n % 10) + 48;
-		n = n / 10;
+		t = ft_int_base(n, base);
+		str[i] = t + 48;
+		n = n / base;
 		i = i - 1;
 	}
 	return (str);
