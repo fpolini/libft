@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/18 19:03:47 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/22 14:32:14 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -77,6 +77,8 @@ SRC =	ft_atoi.c\
 OBJ = $(SRC:.c=.o)
 
 CFLAGS = -Wall -Wextra -Werror
+
+.PHONY: all clean fclean re
 
 all: $(NAME)
 
