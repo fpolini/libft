@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/12/02 15:30:32 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 16:16:25 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/22 14:43:25 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,8 @@ void		*ft_memmove(void *s1, const void *s2, size_t n)
 	char			*ss1;
 	const char		*ss2;
 
-	ss1 = s1;
-	ss2 = s2;
+	ss1 = (char*)s1;
+	ss2 = (const char*)s2;
 	if ((ss1 <= ss2) || ((ss1 + n) <= ss2))
 		s1 = ft_do(s1, n, ss1, ss2);
 	else

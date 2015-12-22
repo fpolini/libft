@@ -6,7 +6,7 @@
 #    By: fpolini <marvin@42.fr>                     +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2015/12/03 15:37:17 by fpolini           #+#    #+#              #
-#    Updated: 2015/12/22 14:32:14 by fpolini          ###   ########.fr        #
+#    Updated: 2015/12/22 14:47:14 by fpolini          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,6 +14,7 @@
 NAME = libft.a
 SRC =	ft_atoi.c\
 		ft_bzero.c\
+		ft_freetab.c\
 		ft_isalnum.c\
 		ft_isalpha.c\
 		ft_isascii.c\
@@ -64,6 +65,7 @@ SRC =	ft_atoi.c\
 		ft_strstr.c\
 		ft_strsub.c\
 		ft_strtrim.c\
+		ft_tall_list.c\
 		ft_tall_tab.c\
 		ft_tolower.c\
 		ft_toupper.c\

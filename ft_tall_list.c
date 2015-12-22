@@ -1,26 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_tall_list.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2015/11/30 15:28:26 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/22 14:11:50 by fpolini          ###   ########.fr       */
+/*   Created: 2015/12/22 14:45:07 by fpolini           #+#    #+#             */
+/*   Updated: 2015/12/22 14:51:52 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+int		ft_tall_list(t_list *lst)
 {
-	size_t	i;
+	int	i;
 
 	i = 0;
-	while (i < n)
+	while (lst)
 	{
-		((unsigned char*)dst)[i] = ((unsigned char*)src)[i];
+		lst = lst->next;
 		i = i + 1;
 	}
-	return (dst);
+	return (i);
 }

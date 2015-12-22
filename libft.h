@@ -6,7 +6,7 @@
 /*   By: fpolini <marvin@42.fr>                     +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2015/11/27 18:08:48 by fpolini           #+#    #+#             */
-/*   Updated: 2015/12/18 19:00:47 by fpolini          ###   ########.fr       */
+/*   Updated: 2015/12/22 14:51:58 by fpolini          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ typedef struct	s_list
 	struct s_list	*next;
 }				t_list;
 
+int				ft_tall_list(t_list *lst);
+void			ft_freetab(char **tab);
 int				ft_tall_tab(char **tab);
 void			ft_striter(char *s, void (*f)(char *));
 void			ft_striteri(char *s, void (*f)(unsigned int, char *));
